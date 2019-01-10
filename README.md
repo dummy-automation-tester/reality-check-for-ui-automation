@@ -27,7 +27,7 @@ Tests the functionality  of the [`machine` executor](https://circleci.com/docs/2
 - Tests the default `org-global` [context](https://circleci.com/docs/2.0/contexts) (*NOTE:* needs a key called `CONTEXT_END_TO_END_TEST_VAR` to exist in a context called `org-global`)
 - Tests multiple contexts (*NOTE:* needs a key called `MULTI_CONTEXT_END_TO_END_VAR` to exist in a context called `individual-local`)
 - Tests upload/storage of [artifacts](https://circleci.com/docs/2.0/artifacts) and [test results](https://circleci.com/docs/2.0/collect-test-data)
-- Tests the functionality of restarting a build with SSH enabled. For this test you pass, there must be an SSH key added to your VCS provider. After adding the SSH key, you must base64 encode the private certificate and store in variable `TEST_SSH_KEY_B64` in reality check project settings. A valid circle api token for the reality check project must also be included in `CIRCLE_TOKEN` to restart a build with SSH and fetch the build details
+- Tests the functionality of restarting a build with SSH enabled. For this test you pass, there must be an SSH key added to your VCS provider. After adding the SSH key, you must base64 encode the private certificate and store in variable `TEST_SSH_KEY_B64` in reality check project settings. A valid personal circle api token for the reality check project must also be included in `CIRCLE_TOKEN` to restart a build with SSH and fetch the build details. NOTE: there is a Server bug when using project level API tokens and GHE. Make sure you're using a token generated from `<url>/account/api`
 
 ## Contributing
 
